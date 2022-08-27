@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "dev": "astro dev",
+    "dev": "TAILWIND_MODE=watch astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -22,9 +22,11 @@
     "*": "prettier --ignore-path .gitignore --write --ignore-unknown"
   },
   "devDependencies": {
+    "@astrojs/tailwind": "1.0.0",
     "@typescript-eslint/eslint-plugin": "5.35.1",
     "@typescript-eslint/parser": "5.35.1",
     "astro": "1.1.1",
+    "daisyui": "2.24.0",
     "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard-with-typescript": "22.0.0",
