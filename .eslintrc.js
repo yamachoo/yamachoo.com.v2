@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:astro/recommended', 'standard-with-typescript', 'prettier'],
+  extends: [
+    'plugin:astro/recommended',
+    'plugin:tailwindcss/recommended',
+    'standard-with-typescript',
+    'prettier'
+  ],
   parserOptions: {
     project: './tsconfig.json',
     extraFileExtensions: ['.astro']
