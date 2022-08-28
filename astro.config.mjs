@@ -6,6 +6,9 @@ import remarkCodeTitles from 'remark-code-titles'
 export default defineConfig({
   integrations: [tailwind()],
   markdown: {
+    shikiConfig: {
+      theme: 'github-dark-dimmed'
+    },
     remarkPlugins: [remarkCodeTitles],
     extendDefaultPlugins: true
   }
