@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import remarkCodeTitles from 'remark-code-titles'
+import remarkExternalLinks from 'remark-external-links'
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,7 +10,7 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark-dimmed'
     },
-    remarkPlugins: [remarkCodeTitles],
+    remarkPlugins: [remarkCodeTitles, remarkExternalLinks],
     extendDefaultPlugins: true
   }
 })
