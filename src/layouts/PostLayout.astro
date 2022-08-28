@@ -1,0 +1,37 @@
+---
+import '@styles/post.css'
+import BaseHead from '@components/BaseHead.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import { SITE_TITLE } from '../config'
+
+const { frontmatter } = Astro.props
+---
+
+<html lang="ja">
+  <head>
+    <BaseHead title={frontmatter.title.concat(' | ', SITE_TITLE)} />
+  </head>
+  <body>
+    <div class="flex min-h-screen flex-col">
+      <Header />
+      <main class="grow">
+        <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+          <div>
+            <p>{frontmatter.updatedAt}</p>
+            <h1 class="mt-2 mb-4 text-2xl font-bold sm:text-3xl">
+              {frontmatter.title}
+            </h1>
+          </div>
+          <div>
+            <img src={frontmatter.url.concat('/', frontmatter.visual)} />
+          </div>
+          <div class="markdown-content">
+            <slot />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
