@@ -11,14 +11,17 @@
     "astro": "astro",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .astro,.js,.jsx,.ts,.tsx --ignore-path .gitignore --cache .",
+    "lint:stylelint": "stylelint **/*.css --ignore-path .gitignore --cache",
     "lint:tsc": "tsc --noEmit",
     "lint:prettier": "prettier --ignore-path .gitignore --check .",
     "fix": "run-s fix:*",
     "fix:eslint": "eslint --ext .astro,.js,.jsx,.ts,.tsx --ignore-path .gitignore --cache . --fix",
+    "fix:stylelint": "stylelint **/*.css --ignore-path .gitignore --cache --fix",
     "fix:prettier": "prettier --ignore-path .gitignore --write ."
   },
   "lint-staged": {
     "*.{astro,js,jsx,ts,tsx}": "eslint --ignore-path .gitignore --cache --fix",
+    "*.css": "stylelint --ignore-path .gitignore --cache --fix",
     "*": "prettier --ignore-path .gitignore --write --ignore-unknown"
   },
   "devDependencies": {
@@ -42,6 +45,10 @@
     "prettier-plugin-astro": "0.5.3",
     "prettier-plugin-tailwindcss": "0.1.13",
     "remark-code-titles": "0.1.2",
+    "stylelint": "14.11.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-recess-order": "3.0.0",
+    "stylelint-config-standard": "28.0.0",
     "typescript": "4.7.4"
   }
 }

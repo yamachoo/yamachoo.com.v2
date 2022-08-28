@@ -12,6 +12,7 @@ pnpm-debug.log*
 
 # cache
 .eslintcache
+.stylelintcache
 
 # environment variables
 .env
