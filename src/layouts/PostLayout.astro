@@ -10,7 +10,10 @@ const { frontmatter } = Astro.props
 
 <html lang="ja">
   <head>
-    <BaseHead title={frontmatter.title.concat(' | ', SITE_TITLE)} />
+    <BaseHead
+      title={frontmatter.title.concat(' | ', SITE_TITLE)}
+      description={frontmatter.description}
+    />
   </head>
   <body>
     <div class="flex min-h-screen flex-col">
@@ -24,7 +27,10 @@ const { frontmatter } = Astro.props
             </h1>
           </div>
           <div>
-            <img src={frontmatter.url.concat('/', frontmatter.visual)} />
+            <img
+              src={frontmatter.url.concat('/', frontmatter.visual)}
+              alt={frontmatter.title}
+            />
           </div>
           <div class="markdown-content">
             <slot />
