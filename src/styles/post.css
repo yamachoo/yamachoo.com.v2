@@ -1,2 +1,2 @@
-@import './_markdown.css';
-@import './_code.css';
+@import url('./_markdown.css');
+@import url('./_code.css');
