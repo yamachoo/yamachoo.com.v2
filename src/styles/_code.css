@@ -1,11 +1,12 @@
-.remark-code-title {
-  padding: 6px 12px;
-  margin-top: 16px;
-  line-height: 1.3;
-  color: hsl(var(--nc));
-  background-color: hsl(var(--n));
+/* コードブロック */
+.astro-code {
+  @apply p-4 shadow-lg;
 }
 
-.astro-code {
-  padding: 16px;
+.remark-code-title {
+  @apply inline-block rounded-t-md bg-neutral px-3 py-2 leading-4 text-neutral-content;
+
+  & + .astro-code {
+    @apply mt-0 rounded-tl-none;
+  }
 }

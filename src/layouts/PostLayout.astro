@@ -20,21 +20,23 @@ const { frontmatter } = Astro.props
       <Header />
       <main class="grow">
         <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-          <div>
-            <p>{frontmatter.updatedAt}</p>
-            <h1 class="mt-2 mb-4 text-2xl font-bold sm:text-3xl">
-              {frontmatter.title}
-            </h1>
-          </div>
-          <div>
-            <img
-              src={frontmatter.url.concat('/', frontmatter.visual)}
-              alt={frontmatter.title}
-            />
-          </div>
-          <div class="markdown-content">
-            <slot />
-          </div>
+          <article class="mx-auto max-w-prose">
+            <div>
+              <p>{frontmatter.updatedAt}</p>
+              <h1 class="mt-2 mb-4 text-2xl font-bold sm:text-3xl">
+                {frontmatter.title}
+              </h1>
+            </div>
+            <div>
+              <img
+                src={frontmatter.url.concat('/', frontmatter.visual)}
+                alt={frontmatter.title}
+              />
+            </div>
+            <div class="markdown">
+              <slot />
+            </div>
+          </article>
         </div>
       </main>
       <Footer />
