@@ -4,7 +4,7 @@ title: 'Hello World'
 createdAt: '2020/07/04'
 updatedAt: '2020/07/10'
 description: 'Hello World!'
-visual: 'sample.png'
+visual: '/posts/hello-world/sample.png'
 ---
 
 ## Block Elements
@@ -119,7 +119,7 @@ hoge
 
 ## Images画像
 
-![サンプル](./hello-world/sample.png)
+![サンプル](/posts/hello-world/sample.png)
 
 ## Table表
 

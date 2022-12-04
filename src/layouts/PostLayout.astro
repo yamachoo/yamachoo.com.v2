@@ -28,10 +28,7 @@ const { frontmatter } = Astro.props
               </h1>
             </div>
             <div>
-              <img
-                src={frontmatter.url.concat('/', frontmatter.visual)}
-                alt={frontmatter.title}
-              />
+              <img src={frontmatter.visual} alt={frontmatter.title} />
             </div>
             <div class="markdown">
               <slot />
