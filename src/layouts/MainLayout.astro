@@ -1,23 +1,11 @@
 ---
-import BaseHead from '@components/BaseHead.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import Base from '@layouts/Base.astro'
 ---
 
-<html lang="ja">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <div class="flex min-h-screen flex-col">
-      <Header />
-      <main class="grow">
-        <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-          <slot />
-        </div>
-      </main>
-      <Footer />
+<Base>
+  <main class="grow">
+    <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <slot />
     </div>
-  </body>
-</html>
+  </main>
+</Base>
